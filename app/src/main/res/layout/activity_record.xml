@@ -34,15 +34,15 @@
                 android:paddingRight="6dp"
                 app:boxBackgroundMode="none">
 
-                <EditText
-                    android:id="@+id/et_recordDate"
+                <TextView
+                    android:id="@+id/tv_recordDate"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:drawableStart="@drawable/ic_person"
+                    android:drawableStart="@drawable/ic_dob"
                     android:drawablePadding="6dp"
-                    android:hint="Name" />
+                    android:hint="Date" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -60,7 +60,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:drawableStart="@drawable/ic_dob"
+                    android:drawableStart="@drawable/ic_measurements"
                     android:drawablePadding="6dp"
                     android:hint="Current Weight" />
 
@@ -80,7 +80,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:drawableStart="@drawable/ic_gender"
+                    android:drawableStart="@drawable/ic_timer"
                     android:drawablePadding="6dp"
                     android:hint="Session Time" />
 
@@ -102,7 +102,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:drawableStart="@drawable/ic_measurements"
+                    android:drawableStart="@drawable/ic_calories"
                     android:drawablePadding="6dp"
                     android:hint="Calories Burnt" />
 
