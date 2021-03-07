@@ -1,20 +1,17 @@
 package com.example.purelogregui
 
-import android.app.Activity
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.UserProfileChangeRequest
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_home.*
 import kotlinx.android.synthetic.main.activity_home.btn_signOut
 import kotlinx.android.synthetic.main.activity_login.*
-import kotlinx.android.synthetic.main.activity_login.btnLogin
 import kotlinx.android.synthetic.main.activity_review.*
 
 class HomeActivity : AppCompatActivity() {
+
     //Authenticate Firebase
     lateinit var auth: FirebaseAuth
     var databaseReference: DatabaseReference? = null
@@ -57,17 +54,17 @@ class HomeActivity : AppCompatActivity() {
             finish()
         }
 
-//        //Redirect user to Record page when button pressed
-//        btnRecHome.setOnClickListener {
-//            startActivity(Intent(this@HomeActivity, RecordActivity::class.java))
-//            finish()
-//        }
-//
-//        //Redirect user to Progress page when button pressed
-//        btnPrgHome.setOnClickListener {
-//            startActivity(Intent(this@HomeActivity, ProgressActivity::class.java))
-//            finish()
-//        }
+        //Redirect user to Record page when button pressed
+        btnRecHome.setOnClickListener {
+            startActivity(Intent(this@HomeActivity, RecordActivity::class.java))
+            finish()
+        }
+
+        //Redirect user to Progress page when button pressed
+        btnPrgHome.setOnClickListener {
+            startActivity(Intent(this@HomeActivity, ProgressActivity::class.java))
+            finish()
+        }
 
         //Sign out when button pressed
         btn_signOut.setOnClickListener {

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/page_bg"
-    tools:context=".ReviewActivity">
+    tools:context=".HomeActivity">
 
     <TextView
         android:id="@+id/textView"
@@ -125,6 +125,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
+        android:background="@drawable/btn_top"
         android:gravity="center"
         android:text="Sign out"
         android:textAllCaps="false"

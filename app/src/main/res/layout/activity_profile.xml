@@ -142,7 +142,7 @@
                         android:id="@+id/tv_Gender_icon"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:drawablePadding="6dp"
+                        android:drawableLeft="@drawable/ic_gender"
                         android:textSize="14dp" />
 
                     <Spinner
@@ -150,7 +150,6 @@
                         style="@style/Widget.AppCompat.Spinner.DropDown"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:drawableLeft="@drawable/ic_gender"
                         android:spinnerMode="dialog" />
 
                 </LinearLayout>

@@ -7,4 +7,9 @@
         <item>Other</item>
     </string-array>
 
+    <string-array name="Chart">
+        <item>Weight</item>
+        <item>Session Time</item>
+        <item>Calories Burnt</item>
+    </string-array>
 </resources>
