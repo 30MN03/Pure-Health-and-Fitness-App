@@ -8,7 +8,6 @@ import android.icu.util.Calendar
 import android.os.Build
 import android.os.Bundle
 import android.text.TextUtils
-import android.util.Log
 import android.view.View
 import android.widget.*
 import androidx.annotation.RequiresApi
@@ -25,9 +24,8 @@ import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
 import kotlinx.coroutines.withContext
-import java.lang.Exception
 import java.util.*
-import kotlinx.android.synthetic.main.activity_profile.btnSaveInfo as btnSaveInfo1
+import kotlinx.android.synthetic.main.activity_review.btnSaveInfo as btnSaveInfo1
 
 class ProfileActivity : AppCompatActivity() {
 
@@ -122,22 +120,22 @@ class ProfileActivity : AppCompatActivity() {
         }
 
         btnProfileEdit.setOnClickListener {
-            btnProfileEdit.visibility = View.GONE;
+            btnProfileEdit.visibility = View.GONE
 
-            tv_profileName.visibility = View.GONE;
-            et_profileName.visibility = View.VISIBLE;
+            tv_profileName.visibility = View.GONE
+            et_profileName.visibility = View.VISIBLE
 
-            tv_profileDOB_show.visibility = View.GONE;
-            tv_profileDOB.visibility = View.VISIBLE;
+            tv_profileDOB_show.visibility = View.GONE
+            tv_profileDOB.visibility = View.VISIBLE
 
-            tv_Gender.visibility = View.GONE;
-            ll_Gender.visibility = View.VISIBLE;
+            tv_Gender.visibility = View.GONE
+            ll_Gender.visibility = View.VISIBLE
 
-            tv_profileWeight.visibility = View.GONE;
-            et_profileWeight.visibility = View.VISIBLE;
+            tv_profileWeight.visibility = View.GONE
+            et_profileWeight.visibility = View.VISIBLE
 
-            tv_profileHeight.visibility = View.GONE;
-            et_profileHeight.visibility = View.VISIBLE;
+            tv_profileHeight.visibility = View.GONE
+            et_profileHeight.visibility = View.VISIBLE
         }
 
         btnSaveInfo.setOnClickListener {
