@@ -15,9 +15,9 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.UserProfileChangeRequest
 import com.google.firebase.database.*
+import kotlinx.android.synthetic.main.activity_register.*
 import kotlinx.android.synthetic.main.activity_home.*
 import kotlinx.android.synthetic.main.activity_profile.*
-import kotlinx.android.synthetic.main.activity_register.*
 import kotlinx.android.synthetic.main.activity_review.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -51,12 +51,30 @@ class ProfileActivity : AppCompatActivity() {
         val userReference = databaseReference?.child(currentUser?.uid!!.toString())
         val currentUserDb = databaseReference?.child((currentUser?.uid!!))
 
-        userReference?.addValueEventListener(object: ValueEventListener {
+        val weight = findViewById<View>(R.id.et_profileWeight) as EditText
+        val height = findViewById<View>(R.id.et_profileHeight) as EditText
+
+
+        userReference?.addValueEventListener(object : ValueEventListener {
+
             override fun onDataChange(snapshot: DataSnapshot) {
 
                 tv_profileName.text = snapshot.child("Name").value.toString()
+                et_profileName.setText(currentUser?.displayName);
+                et_profileName.hint = snapshot.child("Name").value.toString()
+
                 tv_profileDOB_show.text = snapshot.child("DateOfBirth").value.toString()
+
                 tv_Gender.text = snapshot.child("Gender").value.toString()
+
+                tv_profileWeight.text = snapshot.child("Weight").value.toString()
+                weight.setText(snapshot.child("Weight").value.toString())
+                et_profileWeight.hint = snapshot.child("Weight").value.toString()
+
+                tv_profileHeight.text = snapshot.child("Height").value.toString()
+                height.setText(snapshot.child("Height").value.toString())
+                et_profileHeight.hint = snapshot.child("Height").value.toString()
+
             }
 
             override fun onCancelled(error: DatabaseError) {
