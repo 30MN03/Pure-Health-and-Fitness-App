@@ -69,17 +69,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="6dp"
-                android:layout_marginBottom="6dp"
+                android:layout_marginBottom="24dp"
                 android:paddingLeft="6dp"
                 android:paddingRight="6dp"
                 app:boxBackgroundMode="none">
 
-                <EditText
-                    android:id="@+id/tv_progressChart"
+                <TextView
+                    android:id="@+id/tv_progressWeight"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp" />
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/tv_progressDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/lineChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dip"/>
 
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>

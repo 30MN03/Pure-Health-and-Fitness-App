@@ -18,6 +18,7 @@ import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_register.*
 import kotlinx.android.synthetic.main.activity_home.*
 import kotlinx.android.synthetic.main.activity_profile.*
+import kotlinx.android.synthetic.main.activity_profile.view.*
 import kotlinx.android.synthetic.main.activity_review.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -64,8 +65,10 @@ class ProfileActivity : AppCompatActivity() {
                 et_profileName.hint = snapshot.child("Name").value.toString()
 
                 tv_profileDOB_show.text = snapshot.child("DateOfBirth").value.toString()
+                tv_profileDOB.text= snapshot.child("DateOfBirth").value.toString()
 
                 tv_Gender.text = snapshot.child("Gender").value.toString()
+//                sp_Gender.setSelection = snapshot.child("Gender").value.toString()
 
                 tv_profileWeight.text = snapshot.child("Weight").value.toString()
                 weight.setText(snapshot.child("Weight").value.toString())
