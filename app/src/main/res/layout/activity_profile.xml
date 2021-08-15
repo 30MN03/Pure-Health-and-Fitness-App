@@ -162,19 +162,39 @@
                 android:paddingRight="6dp"
                 app:boxBackgroundMode="none">
 
-                <EditText
-                    android:id="@+id/et_profileWeight"
+                <LinearLayout
+                    android:id="@+id/ll_Weight"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:drawableStart="@drawable/ic_measurements"
-                    android:drawablePadding="6dp"
-                    android:inputType="number"
+                    android:orientation="horizontal"
                     android:paddingLeft="0dp"
-                    android:paddingTop="8dp"
+                    android:paddingTop="0dp"
                     android:paddingRight="0dp"
                     android:paddingBottom="0dp"
-                    android:textSize="14dp"
-                    android:visibility="gone" />
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/et_profileWeight"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_measurements"
+                        android:drawablePadding="6dp"
+                        android:inputType="number"
+                        android:paddingLeft="0dp"
+                        android:paddingTop="8dp"
+                        android:paddingRight="0dp"
+                        android:paddingBottom="0dp"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/tv_kg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:hint="kg"/>
+
+                </LinearLayout>
 
                 <TextView
                     android:id="@+id/tv_profileWeight"
@@ -197,9 +217,20 @@
                 android:paddingRight="6dp"
                 app:boxBackgroundMode="none">
 
+                <LinearLayout
+                    android:id="@+id/ll_Height"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="0dp"
+                    android:paddingTop="0dp"
+                    android:paddingRight="0dp"
+                    android:paddingBottom="0dp"
+                    android:visibility="gone">
+
                 <EditText
                     android:id="@+id/et_profileHeight"
-                    android:layout_width="match_parent"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/ic_measurements"
                     android:drawablePadding="6dp"
@@ -208,8 +239,17 @@
                     android:paddingTop="8dp"
                     android:paddingRight="0dp"
                     android:paddingBottom="0dp"
-                    android:textSize="14dp"
-                    android:visibility="gone" />
+                    android:textSize="14dp" />
+
+                    <TextView
+                        android:id="@+id/tv_cm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:hint="cm"/>
+
+                </LinearLayout>
 
                 <TextView
                     android:id="@+id/tv_profileHeight"
@@ -234,7 +274,7 @@
         android:background="@drawable/logo_bg"
         android:backgroundTint="#42A5F5"
         android:text="Save info"
-        android:textColor="@android:color/white"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@id/cardView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

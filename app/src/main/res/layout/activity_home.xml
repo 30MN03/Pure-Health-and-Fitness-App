@@ -42,7 +42,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Welcome"
-            android:textColor="@color/white"
+            android:textColor="@color/design_default_color_on_primary"
+
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/cardView"
             app:layout_constraintTop_toBottomOf="@+id/textView"
@@ -55,7 +56,7 @@
             android:layout_marginStart="4dp"
             android:layout_marginLeft="4dp"
             android:inputType="textPersonName"
-            android:textColor="@color/white"
+            android:textColor="@color/design_default_color_on_primary"
             android:textStyle="bold" />
 
     </LinearLayout>
@@ -88,7 +89,7 @@
                 android:background="@drawable/logo_bg"
                 android:backgroundTint="#42A5F5"
                 android:text="PROFILE"
-                android:textColor="@android:color/white" />
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/btnRecHome"
@@ -99,7 +100,7 @@
                 android:backgroundTint="#42A5F5"
                 android:gravity="center_horizontal|center_vertical"
                 android:text="RECORD"
-                android:textColor="@android:color/white" />
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/btnPrgHome"
@@ -110,7 +111,7 @@
                 android:backgroundTint="#42A5F5"
                 android:gravity="center_horizontal|center_vertical"
                 android:text="PROGRESS"
-                android:textColor="@android:color/white" />
+                android:textStyle="bold" />
 
 
         </LinearLayout>

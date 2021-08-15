@@ -9,7 +9,9 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_register.*
 import kotlinx.android.synthetic.main.activity_home.*
+import kotlinx.android.synthetic.main.activity_progress.*
 import kotlinx.android.synthetic.main.activity_record.*
+import kotlinx.android.synthetic.main.activity_record.btn_back
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -39,6 +41,12 @@ class RecordActivity : AppCompatActivity() {
         date.text = SimpleDateFormat("dd.MM.yyyy").format(System.currentTimeMillis())
 
         btnRecord.setOnClickListener {
+            startActivity(Intent(this@RecordActivity, HomeActivity::class.java))
+            finish()
+        }
+
+        //return to home page when button pressed
+        btn_back.setOnClickListener {
             startActivity(Intent(this@RecordActivity, HomeActivity::class.java))
             finish()
         }

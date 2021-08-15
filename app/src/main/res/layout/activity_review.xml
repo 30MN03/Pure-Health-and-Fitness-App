@@ -74,7 +74,7 @@
         android:background="@drawable/logo_bg"
         android:backgroundTint="#42A5F5"
         android:text="Save info"
-        android:textColor="@android:color/white"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@id/cardView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

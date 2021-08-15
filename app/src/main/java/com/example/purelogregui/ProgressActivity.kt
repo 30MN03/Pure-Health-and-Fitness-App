@@ -1,22 +1,32 @@
 package com.example.purelogregui
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.github.mikephil.charting.animation.Easing
+import com.github.mikephil.charting.components.YAxis
 import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.LineData
 import com.github.mikephil.charting.data.LineDataSet
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import kotlinx.android.synthetic.main.activity_home.*
+import kotlinx.android.synthetic.main.activity_profile.*
 import kotlinx.android.synthetic.main.activity_progress.*
 import java.security.KeyStore
 import java.util.*
 import java.util.Map
 import kotlin.collections.ArrayList
+import kotlin.math.E
+import com.github.mikephil.charting.charts.Chart
+
+import com.github.mikephil.charting.components.XAxis
+
+
+
 
 class ProgressActivity : AppCompatActivity() {
 
@@ -42,6 +52,42 @@ class ProgressActivity : AppCompatActivity() {
         val userReference = databaseReference?.child(currentUser?.uid!!.toString())
         val currentUserDb = databaseReference?.child((currentUser?.uid!!))
 
+        // access the items of the list
+        val charts = resources.getStringArray(R.array.Chart)
+
+        // access the spinner
+        val spinner = findViewById<Spinner>(R.id.sp_Chart)
+
+        if (spinner != null) {
+            val adapter = ArrayAdapter(this,
+                    android.R.layout.simple_spinner_item, charts)
+            spinner.adapter = adapter
+
+
+            spinner.onItemSelectedListener = object :
+                    AdapterView.OnItemSelectedListener {
+                override fun onItemSelected(parent: AdapterView<*>,
+                                            view: View, position: Int, id: Long) {
+
+                    (parent.getChildAt(0) as TextView).setTextColor(Color.GRAY)
+                    (parent.getChildAt(0) as TextView).textSize = 14f
+
+                    if(position==0){
+                    sp_Chart.visibility = View.GONE
+                    }
+                    else if(position==1){
+
+                    }
+
+
+                }
+
+                override fun onNothingSelected(parent: AdapterView<*>) {
+                    Toast.makeText(this@ProgressActivity, "Select a graph to display", Toast.LENGTH_LONG).show()
+                }
+            }
+        }
+
         userReference?.addValueEventListener(object : ValueEventListener {
 
             override fun onDataChange(snapshot: DataSnapshot) {
@@ -50,14 +96,18 @@ class ProgressActivity : AppCompatActivity() {
                 val entries = ArrayList<Entry>()
 
                 val Weight = snapshot.child("Weight").value.toString().toFloat()
-//                val Date = snapshot.child("Date").value.toString().toFloat()
-
+                val Date = snapshot.child("StartingDate").value.toString().toFloat()
 
                 //Part2
-                entries.add(Entry(0f, Weight))
+                entries.add(Entry( 6082021f, 124f ))
+                entries.add(Entry( 7082021f, 125f ))
+                entries.add(Entry(Date, Weight))
+                entries.add(Entry( 9082021f, 138f ))
+                entries.add(Entry( 10082021f, 140f ))
 
-                //Test
-                tv_progressWeight.text = Weight.toString()
+
+                //Temp
+//                tv_progressWeight.text = Weight.toString()
 //                tv_progressDate.text = Date.toString()
 
                 //Part3
@@ -66,12 +116,16 @@ class ProgressActivity : AppCompatActivity() {
                 //Part4
                 vl.setDrawValues(false)
                 vl.setDrawFilled(true)
-                vl.lineWidth = 3f
-                vl.fillColor = R.color.design_default_color_primary
+                vl.setDrawCircleHole(false)
+                vl.circleRadius = 4f
+                vl.lineWidth = 2f
+//                vl.color = R.color.white
+                vl.fillColor = R.color.design_default_color_background
                 vl.fillAlpha = R.color.design_default_color_secondary
 
                 //Part5
                 lineChart.xAxis.labelRotationAngle = 0f
+                lineChart.xAxis.textColor = R.color.design_default_color_on_primary
 
                 //Part6
                 lineChart.data = LineData(vl)
@@ -84,7 +138,8 @@ class ProgressActivity : AppCompatActivity() {
                 lineChart.setPinchZoom(true)
 
                 //Part9
-                lineChart.description.text = "Date"
+                lineChart.axisLeft.textColor = R.color.design_default_color_on_primary
+                lineChart.description.text = "Progression"
                 lineChart.setNoDataText("No data available!")
 
                 //Part10

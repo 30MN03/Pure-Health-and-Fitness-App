@@ -70,11 +70,11 @@ class ProfileActivity : AppCompatActivity() {
                 tv_Gender.text = snapshot.child("Gender").value.toString()
 //                sp_Gender.setSelection = snapshot.child("Gender").value.toString()
 
-                tv_profileWeight.text = snapshot.child("Weight").value.toString()
+                tv_profileWeight.text = snapshot.child("Weight").value.toString()+" kg"
                 weight.setText(snapshot.child("Weight").value.toString())
                 et_profileWeight.hint = snapshot.child("Weight").value.toString()
 
-                tv_profileHeight.text = snapshot.child("Height").value.toString()
+                tv_profileHeight.text = snapshot.child("Height").value.toString()+" cm"
                 height.setText(snapshot.child("Height").value.toString())
                 et_profileHeight.hint = snapshot.child("Height").value.toString()
 
@@ -140,6 +140,8 @@ class ProfileActivity : AppCompatActivity() {
             }
         }
 
+
+
         btnProfileEdit.setOnClickListener {
             btnProfileEdit.visibility = View.GONE
 
@@ -153,10 +155,15 @@ class ProfileActivity : AppCompatActivity() {
             ll_Gender.visibility = View.VISIBLE
 
             tv_profileWeight.visibility = View.GONE
-            et_profileWeight.visibility = View.VISIBLE
+            ll_Weight.visibility = View.VISIBLE
 
             tv_profileHeight.visibility = View.GONE
-            et_profileHeight.visibility = View.VISIBLE
+            ll_Height.visibility = View.VISIBLE
+
+            var alreadyExecuted = false
+            if(!alreadyExecuted) {
+                currentUserDb?.child("StartingDate")?.setValue(java.text.SimpleDateFormat("ddMMyyyy").format(System.currentTimeMillis()))
+            }
         }
 
         btnSaveInfo.setOnClickListener {
