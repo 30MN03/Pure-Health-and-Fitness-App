@@ -34,8 +34,6 @@ class RecordActivity : AppCompatActivity() {
         databaseReference = database?.reference!!.child("Users")
         databaseReference2 =database?.reference!!.child("Records")
 
-
-
         record()
     }
 

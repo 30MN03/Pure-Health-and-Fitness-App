@@ -26,9 +26,6 @@ import com.github.mikephil.charting.charts.Chart
 
 import com.github.mikephil.charting.components.XAxis
 
-
-
-
 class ProgressActivity : AppCompatActivity() {
 
     //Authenticate Firebase

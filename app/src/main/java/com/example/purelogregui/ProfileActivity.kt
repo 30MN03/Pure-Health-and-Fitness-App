@@ -159,9 +159,8 @@ class ProfileActivity : AppCompatActivity() {
 
             tv_profileHeight.visibility = View.GONE
             ll_Height.visibility = View.VISIBLE
-
-
         }
+
 
         btnSaveInfo.setOnClickListener {
             if (TextUtils.isEmpty(et_profileName.text.toString())) {
