@@ -160,11 +160,7 @@ class ProfileActivity : AppCompatActivity() {
             tv_profileHeight.visibility = View.GONE
             ll_Height.visibility = View.VISIBLE
 
-            var alreadyExecuted = false
-            if(!alreadyExecuted) {
-                currentUserDb?.child("StartingDate")?.setValue(java.text.SimpleDateFormat("ddMMyyyy").format(System.currentTimeMillis()))
-            alreadyExecuted.equals(true)
-            }
+
         }
 
         btnSaveInfo.setOnClickListener {
@@ -201,6 +197,13 @@ class ProfileActivity : AppCompatActivity() {
             currentUserDb?.child("Name")?.setValue(et_profileName.text.toString())
             currentUserDb?.child("Weight")?.setValue(et_profileWeight.text.toString())
             currentUserDb?.child("Height")?.setValue(et_profileHeight.text.toString())
+
+            var alreadyExecuted = false
+            if(!alreadyExecuted) {
+                currentUserDb?.child("StartingDate")?.setValue(java.text.SimpleDateFormat("ddMMyyyy").format(System.currentTimeMillis()))
+                currentUserDb?.child("StartingWeight")?.setValue(et_profileWeight.text.toString())
+                alreadyExecuted = true
+            }
 
             val update = UserProfileChangeRequest.Builder()
                     .setDisplayName(name)

@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/Users/44740/Documents/Uni/Year 3/Development Project/PureLogResUI/app/src/main/res/drawable/ic_baseline_straighten_24.xml" value="0.17401315789473684" />
         <entry key="..\:/Users/44740/Documents/Uni/Year 3/Development Project/PureLogResUI/app/src/main/res/drawable/ic_height.xml" value="0.17401315789473684" />
+        <entry key="..\:/Users/44740/Documents/Uni/Year 3/Development Project/PureLogResUI/app/src/main/res/drawable/oval_marker.xml" value="0.1" />
         <entry key="..\:/Users/44740/Documents/Uni/Year 3/Development Project/PureLogResUI/app/src/main/res/drawable/page_bg.xml" value="0.17401315789473684" />
         <entry key="..\:/Users/44740/Documents/Uni/Year 3/Development Project/PureLogResUI/app/src/main/res/layout/activity_home.xml" value="0.176" />
         <entry key="..\:/Users/44740/Documents/Uni/Year 3/Development Project/PureLogResUI/app/src/main/res/layout/activity_login.xml" value="0.1092896174863388" />
@@ -13,6 +14,8 @@
         <entry key="..\:/Users/44740/Documents/Uni/Year 3/Development Project/PureLogResUI/app/src/main/res/layout/activity_record.xml" value="0.1" />
         <entry key="..\:/Users/44740/Documents/Uni/Year 3/Development Project/PureLogResUI/app/src/main/res/layout/activity_register.xml" value="0.1092896174863388" />
         <entry key="..\:/Users/44740/Documents/Uni/Year 3/Development Project/PureLogResUI/app/src/main/res/layout/activity_review.xml" value="0.1" />
+        <entry key="..\:/Users/44740/Documents/Uni/Year 3/Development Project/PureLogResUI/app/src/main/res/layout/marker_view.xml" value="0.1" />
+        <entry key="..\:/Users/44740/Documents/Uni/Year 3/Development Project/PureLogResUI/app/src/main/res/layout/oval_marker.xml" value="0.1" />
       </map>
     </option>
   </component>

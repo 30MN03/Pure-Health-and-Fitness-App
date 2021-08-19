@@ -1,5 +1,6 @@
 package com.example.purelogregui
 
+import CustomMarker
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
@@ -96,20 +97,23 @@ class ProgressActivity : AppCompatActivity() {
                 //Part1
                 val entries = ArrayList<Entry>()
 
+                val startingWeight = snapshot.child("StartingWeight").value.toString().toFloat()
+                val startingDate = snapshot.child("StartingDate").value.toString().toFloat()
                 val Weight = snapshot.child("Weight").value.toString().toFloat()
-                val Date = snapshot.child("StartingDate").value.toString().toFloat()
+                val Date =
 
                 //Part2
-//                entries.add(Entry( 6082021f, 124f ))
-//                entries.add(Entry( 7082021f, 125f ))
-                entries.add(Entry(Date, Weight))
-//                entries.add(Entry( 9082021f, 138f ))
-//                entries.add(Entry( 10082021f, 140f ))
+                entries.add(Entry( 6082021f, 124f ))
+                entries.add(Entry( 7082021f, 125f ))
+                entries.add(Entry(startingDate, startingWeight))
+                entries.add(Entry(startingDate, startingWeight))
+                entries.add(Entry( 9082021f, 138f ))
+                entries.add(Entry( 10082021f, 140f ))
 
 
                 //Temp
-//                tv_progressWeight.text = Weight.toString()
-//                tv_progressDate.text = Date.toString()
+                tv_progressWeight.text = startingWeight.toString()
+                tv_progressDate.text = startingDate.toString()
 
                 //Part3
                 val vl = LineDataSet(entries, "Workout Session")
@@ -147,7 +151,7 @@ class ProgressActivity : AppCompatActivity() {
                 lineChart.animateX(1800, Easing.EaseInExpo)
 
                 //Part11
-//                val markerView = CustomMarker(this@ProgressActivity, R.layout.marker_view)
+//                val markerView = CustomMarker(this@ProgressActivity, R.layout.oval_marker)
 //                lineChart.marker = markerView
 
             }

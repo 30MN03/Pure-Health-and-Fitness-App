@@ -97,7 +97,7 @@
                 app:boxBackgroundMode="none">
 
                 <EditText
-                    android:id="@+id/tv_recordCalories"
+                    android:id="@+id/et_recordCalories"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
