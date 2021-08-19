@@ -100,12 +100,11 @@ class ProgressActivity : AppCompatActivity() {
                 val startingWeight = snapshot.child("StartingWeight").value.toString().toFloat()
                 val startingDate = snapshot.child("StartingDate").value.toString().toFloat()
                 val Weight = snapshot.child("Weight").value.toString().toFloat()
-                val Date =
+                val Date = snapshot.child("Date").value.toString().toFloat()
 
                 //Part2
                 entries.add(Entry( 6082021f, 124f ))
                 entries.add(Entry( 7082021f, 125f ))
-                entries.add(Entry(startingDate, startingWeight))
                 entries.add(Entry(startingDate, startingWeight))
                 entries.add(Entry( 9082021f, 138f ))
                 entries.add(Entry( 10082021f, 140f ))
