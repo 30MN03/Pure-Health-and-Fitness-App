@@ -177,7 +177,7 @@
                         android:id="@+id/et_profileWeight"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
-                        android:drawableStart="@drawable/ic_measurements"
+                        android:drawableStart="@drawable/ic_weight"
                         android:drawablePadding="6dp"
                         android:inputType="number"
                         android:paddingLeft="0dp"
@@ -202,7 +202,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:drawableStart="@drawable/ic_measurements"
+                    android:drawableStart="@drawable/ic_weight"
                     android:drawablePadding="6dp"
                     android:hint="Weight" />
 
@@ -232,7 +232,7 @@
                     android:id="@+id/et_profileHeight"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:drawableStart="@drawable/ic_measurements"
+                    android:drawableStart="@drawable/ic_height"
                     android:drawablePadding="6dp"
                     android:inputType="number"
                     android:paddingLeft="0dp"
@@ -257,7 +257,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:drawableStart="@drawable/ic_measurements"
+                    android:drawableStart="@drawable/ic_height"
                     android:drawablePadding="6dp"
                     android:hint="Height" />
 

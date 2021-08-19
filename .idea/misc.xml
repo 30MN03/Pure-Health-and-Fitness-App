@@ -3,8 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/44740/Documents/Uni/Year 3/Development Project/PureLogResUI/app/src/main/res/drawable/ic_baseline_straighten_24.xml" value="0.17401315789473684" />
+        <entry key="..\:/Users/44740/Documents/Uni/Year 3/Development Project/PureLogResUI/app/src/main/res/drawable/ic_height.xml" value="0.17401315789473684" />
         <entry key="..\:/Users/44740/Documents/Uni/Year 3/Development Project/PureLogResUI/app/src/main/res/drawable/page_bg.xml" value="0.17401315789473684" />
-        <entry key="..\:/Users/44740/Documents/Uni/Year 3/Development Project/PureLogResUI/app/src/main/res/layout/activity_home.xml" value="0.12226775956284153" />
+        <entry key="..\:/Users/44740/Documents/Uni/Year 3/Development Project/PureLogResUI/app/src/main/res/layout/activity_home.xml" value="0.176" />
         <entry key="..\:/Users/44740/Documents/Uni/Year 3/Development Project/PureLogResUI/app/src/main/res/layout/activity_login.xml" value="0.1092896174863388" />
         <entry key="..\:/Users/44740/Documents/Uni/Year 3/Development Project/PureLogResUI/app/src/main/res/layout/activity_profile.xml" value="0.15061475409836064" />
         <entry key="..\:/Users/44740/Documents/Uni/Year 3/Development Project/PureLogResUI/app/src/main/res/layout/activity_progress.xml" value="0.1" />

@@ -73,13 +73,14 @@ class ProgressActivity : AppCompatActivity() {
                     (parent.getChildAt(0) as TextView).textSize = 14f
 
                     if(position==0){
-                    sp_Chart.visibility = View.GONE
+                        lineChart.visibility = View.VISIBLE
                     }
                     else if(position==1){
-
+                        lineChart.visibility = View.GONE
                     }
-
-
+                    else if(position==2){
+                        lineChart.visibility = View.GONE
+                    }
                 }
 
                 override fun onNothingSelected(parent: AdapterView<*>) {
@@ -99,11 +100,11 @@ class ProgressActivity : AppCompatActivity() {
                 val Date = snapshot.child("StartingDate").value.toString().toFloat()
 
                 //Part2
-                entries.add(Entry( 6082021f, 124f ))
-                entries.add(Entry( 7082021f, 125f ))
+//                entries.add(Entry( 6082021f, 124f ))
+//                entries.add(Entry( 7082021f, 125f ))
                 entries.add(Entry(Date, Weight))
-                entries.add(Entry( 9082021f, 138f ))
-                entries.add(Entry( 10082021f, 140f ))
+//                entries.add(Entry( 9082021f, 138f ))
+//                entries.add(Entry( 10082021f, 140f ))
 
 
                 //Temp
@@ -120,12 +121,12 @@ class ProgressActivity : AppCompatActivity() {
                 vl.circleRadius = 4f
                 vl.lineWidth = 2f
 //                vl.color = R.color.white
-                vl.fillColor = R.color.design_default_color_background
-                vl.fillAlpha = R.color.design_default_color_secondary
+//                vl.fillColor = R.color.design_default_color_background
+//                vl.fillAlpha = R.color.design_default_color_secondary
 
                 //Part5
                 lineChart.xAxis.labelRotationAngle = 0f
-                lineChart.xAxis.textColor = R.color.design_default_color_on_primary
+//                lineChart.xAxis.textColor = R.color.design_default_color_on_primary
 
                 //Part6
                 lineChart.data = LineData(vl)
@@ -138,7 +139,7 @@ class ProgressActivity : AppCompatActivity() {
                 lineChart.setPinchZoom(true)
 
                 //Part9
-                lineChart.axisLeft.textColor = R.color.design_default_color_on_primary
+//                lineChart.axisLeft.textColor = R.color.design_default_color_secondary
                 lineChart.description.text = "Progression"
                 lineChart.setNoDataText("No data available!")
 

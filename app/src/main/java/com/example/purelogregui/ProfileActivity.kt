@@ -163,6 +163,7 @@ class ProfileActivity : AppCompatActivity() {
             var alreadyExecuted = false
             if(!alreadyExecuted) {
                 currentUserDb?.child("StartingDate")?.setValue(java.text.SimpleDateFormat("ddMMyyyy").format(System.currentTimeMillis()))
+            alreadyExecuted.equals(true)
             }
         }
 
