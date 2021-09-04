@@ -23,7 +23,6 @@ import java.util.Map
 import kotlin.collections.ArrayList
 import kotlin.math.E
 import com.github.mikephil.charting.charts.Chart
-
 import com.github.mikephil.charting.components.XAxis
 
 class ProgressActivity : AppCompatActivity() {
@@ -37,10 +36,10 @@ class ProgressActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_progress)
 
-        //Access database table named "Users"
+        //Access database table named "Records"
         auth = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance()
-        databaseReference = database?.reference!!.child("Users")
+        databaseReference = database?.reference!!.child("Records")
 
         progress()
     }
@@ -72,12 +71,18 @@ class ProgressActivity : AppCompatActivity() {
 
                     if(position==0){
                         lineChart.visibility = View.VISIBLE
+                        tv_progressTime.visibility =View.GONE
+                        tv_progressCalories.visibility = View.GONE
                     }
                     else if(position==1){
                         lineChart.visibility = View.GONE
+                        tv_progressTime.visibility =View.VISIBLE
+                        tv_progressCalories.visibility = View.GONE
                     }
                     else if(position==2){
                         lineChart.visibility = View.GONE
+                        tv_progressTime.visibility =View.GONE
+                        tv_progressCalories.visibility = View.VISIBLE
                     }
                 }
 
@@ -94,22 +99,22 @@ class ProgressActivity : AppCompatActivity() {
                 //Part1
                 val entries = ArrayList<Entry>()
 
-                val startingWeight = snapshot.child("StartingWeight").value.toString().toFloat()
-                val startingDate = snapshot.child("StartingDate").value.toString().toFloat()
+//                val startingWeight = snapshot.child("StartingWeight").value.toString().toFloat()
+//                val startingDate = snapshot.child("StartingDate").value.toString().toFloat()
                 val Weight = snapshot.child("Weight").value.toString().toFloat()
                 val Date = snapshot.child("Date").value.toString().toFloat()
 
                 //Part2
-                entries.add(Entry( 6082021f, 124f ))
-                entries.add(Entry( 7082021f, 125f ))
-                entries.add(Entry(startingDate, startingWeight))
-                entries.add(Entry( 9082021f, 138f ))
-                entries.add(Entry( 10082021f, 140f ))
+//                entries.add(Entry( 2092021f, 124f ))
+//                entries.add(Entry( 3092021f, 125f ))
+                entries.add(Entry(Date, Weight))
+//                entries.add(Entry( 5092021f, 138f ))
+//                entries.add(Entry( 6092021f, 140f ))
 
 
-                //Temp
-                tv_progressWeight.text = startingWeight.toString()
-                tv_progressDate.text = startingDate.toString()
+                //UPDATE
+                tv_progressTime.text = snapshot.child("Time").value.toString()
+                tv_progressCalories.text = snapshot.child("Calories").value.toString()
 
                 //Part3
                 val vl = LineDataSet(entries, "Workout Session")

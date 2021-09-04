@@ -75,19 +75,27 @@
                 app:boxBackgroundMode="none">
 
                 <TextView
-                    android:id="@+id/tv_progressWeight"
+                    android:id="@+id/tv_progressTime"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:drawableStart="@drawable/ic_timer"
+                    android:drawablePadding="6dp"/>
 
                 <TextView
-                    android:id="@+id/tv_progressDate"
+                    android:id="@+id/tv_progressCalories"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:drawableStart="@drawable/ic_calories"
+                    android:drawablePadding="6dp"/>
 
                 <com.github.mikephil.charting.charts.LineChart
                     android:id="@+id/lineChart"
                     android:layout_width="match_parent"
-                    android:layout_height="200dip"/>
+                    android:layout_height="200dp"/>
 
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>

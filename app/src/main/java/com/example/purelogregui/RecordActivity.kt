@@ -45,14 +45,14 @@ class RecordActivity : AppCompatActivity() {
         val currentUserDb = databaseReference2?.child((currentUser?.uid!!))
 
         val date: TextView = findViewById(R.id.tv_recordDate)
-        date.text = SimpleDateFormat("dd.MM.yyyy").format(System.currentTimeMillis()).toString()
+        date.text = SimpleDateFormat("ddMMyyyy").format(System.currentTimeMillis()).toString()
 
 
         btnRecord.setOnClickListener {
-            currentUserDb?.child("Sessions")?.push()?.setValue(date.text.toString())
-            currentUserDb?.child("Sessions")?.push()?.setValue(et_recordWeight.text.toString())
-            currentUserDb?.child("Sessions")?.push()?.setValue(et_recordTime.text.toString())
-            currentUserDb?.child("Sessions")?.push()?.setValue(et_recordCalories.text.toString())
+            currentUserDb?.child("Date")?.setValue(date.text.toString())
+            currentUserDb?.child("Weight")?.setValue(et_recordWeight.text.toString())
+            currentUserDb?.child("Time")?.setValue(et_recordTime.text.toString())
+            currentUserDb?.child("Calories")?.setValue(et_recordCalories.text.toString())
 
             startActivity(Intent(this@RecordActivity, HomeActivity::class.java))
             finish()

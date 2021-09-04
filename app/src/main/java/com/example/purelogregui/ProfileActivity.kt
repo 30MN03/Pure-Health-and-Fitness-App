@@ -197,6 +197,7 @@ class ProfileActivity : AppCompatActivity() {
             currentUserDb?.child("Weight")?.setValue(et_profileWeight.text.toString())
             currentUserDb?.child("Height")?.setValue(et_profileHeight.text.toString())
 
+            //Attempt at once occurring loop
             var alreadyExecuted = false
             if(!alreadyExecuted) {
                 currentUserDb?.child("StartingDate")?.setValue(java.text.SimpleDateFormat("ddMMyyyy").format(System.currentTimeMillis()))
